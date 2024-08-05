@@ -1,0 +1,188 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top of the body */
+    min-height: 100vh; /* Use min-height instead of height */
+    overflow-y: auto; /* Allow scrolling */
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    margin-top: 20px; /* Add top margin for spacing */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form .input-group {
+    margin-bottom: 15px;
+}
+
+form .input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form .input-group input[type="text"],
+form .input-group input[type="email"],
+form .input-group textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.flex-40,
+.flex-60 {
+    margin-bottom: 20px; /* Add some margin to separate sections */
+}
+
+.flex-40 {
+    width: 40%; /* Set the width of the name container to 40% */
+}
+
+.flex-60 {
+    width: 60%; /* Set the width of the email container to 60% */
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.flex-item {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.flex-item:last-child {
+    margin-right: 0;
+}
+
+.stars {
+    display: flex;
+    justify-content: space-between;
+    max-width: 200px;
+}
+
+.stars input {
+    display: none;
+}
+
+.stars label {
+    font-size: 30px;
+    color: grey;
+    cursor: pointer;
+}
+
+.stars input:checked ~ label,
+.stars input:hover ~ label {
+    color: gold;
+}
+
+.tables {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table,
+th,
+td {
+    border: none; /* Remove table border lines */
+}
+
+thead {
+    background-color: #f2f2f2;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #fff; /* White for even rows */
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #dcdcdc; /* Grey for odd rows */
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.button-container {
+    text-align: left;
+}
+
+.required {
+    color: red;
+    margin-left: 5px;
+}
+
+@media (max-width: 600px) {
+    .flex {
+        flex-direction: column;
+        width: 100%; /* Ensure full width on smaller screens */
+    }
+
+    .flex-item {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .flex-item:last-child {
+        margin-bottom: 0;
+    }
+
+    .tables table,
+    th,
+    td {
+        font-size: 12px; /* Reduce font size for better readability */
+        padding: 4px;    /* Reduce padding for smaller screens */
+    }
+
+    .container {
+        margin: 10px; /* Add margin to prevent elements from being cut off */
+    }
+
+    .stars label {
+        font-size: 20px; /* Smaller stars for mobile */
+    }
+
+    .flex-40,
+    .flex-60 {
+        width: 100%; /* Full width for both sections on smaller screens */
+    }
+}
